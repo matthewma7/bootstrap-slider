@@ -180,6 +180,7 @@ Options can be passed either as a data (data-slider-foo) attribute, or as part o
 | orientation |	string | 'horizontal' |	set the orientation. Accepts 'vertical' or 'horizontal' |
 | value |	float,array |	5	| initial value. Use array to have a range slider. |
 | range |	bool |	false	| make range slider. Optional if initial value is an array. If initial value is scalar, max will be used for second value. |
+| across |	bool |	false	| when using range slider, allow to drag one slider over the other one |
 | selection |	string |	'before' |	selection placement. Accepts: 'before', 'after' or 'none'. In case of a range slider, the selection will be placed between the handles |
 | tooltip |	string |	'show' |	whether to show the tooltip on drag, hide the tooltip, or always show the tooltip. Accepts: 'show', 'hide', or 'always' |
 | tooltip_split |	bool |	false |	if false show one tootip if true show two tooltips one for each handler |

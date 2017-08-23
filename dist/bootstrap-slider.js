@@ -831,6 +831,7 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 				orientation: 'horizontal',
 				value: 5,
 				range: false,
+				across: false,
 				selection: 'before',
 				tooltip: 'show',
 				tooltip_split: false,
@@ -1599,7 +1600,7 @@ var windowIsDefined = (typeof window === "undefined" ? "undefined" : _typeof(win
 				}
 			},
 			_adjustPercentageForRangeSliders: function _adjustPercentageForRangeSliders(percentage) {
-				if (this.options.range) {
+				if (this.options.range && !this.options.across) {
 					var precision = this._getNumDigitsAfterDecimalPlace(percentage);
 					precision = precision ? precision - 1 : 0;
 					var percentageWithAdjustedPrecision = this._applyToFixedAndParseFloat(percentage, precision);

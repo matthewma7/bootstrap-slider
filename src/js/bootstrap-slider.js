@@ -858,6 +858,7 @@ const windowIsDefined = (typeof window === "object");
 				orientation: 'horizontal',
 				value: 5,
 				range: false,
+				across: false,
 				selection: 'before',
 				tooltip: 'show',
 				tooltip_split: false,
@@ -1637,7 +1638,7 @@ const windowIsDefined = (typeof window === "object");
 				}
 			},
 			_adjustPercentageForRangeSliders: function(percentage) {
-				if (this.options.range) {
+				if (this.options.range && !this.options.across) {
 					var precision = this._getNumDigitsAfterDecimalPlace(percentage);
 					precision = precision ? precision - 1 : 0;
 					var percentageWithAdjustedPrecision = this._applyToFixedAndParseFloat(percentage, precision);
